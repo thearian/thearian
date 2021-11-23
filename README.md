@@ -1,7 +1,7 @@
 # Arian Mir <small>`INTP`</small>
 
-Im Arian Mirahmadi, a **front-end/full-stack web developer**.  
-With **3+ years** of web development exprience,
+I'm Arian Mirahmadi, a **front-end/full-stack web developer**.  
+With **3+ years** of web development experience,
 and 7+ years of computer engineering self-education.  
 
 ## CV
