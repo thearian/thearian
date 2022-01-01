@@ -1,4 +1,4 @@
-# Arian Mir <small>`INTP`</small>
+# Arian Mirahmadi
 
 I'm Arian Mirahmadi, a **front-end/full-stack web developer**.  
 With **3+ years** of web development experience,
@@ -6,7 +6,6 @@ and 7+ years of computer engineering self-education.
 
 ## CV
 
-[View in Markdown](/CV.md)  
 [Download PDF](/Arian-Mirahmadi-Frontend-Fullstack.pdf)
 
 ## Socials and Contact
