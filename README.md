@@ -1,12 +1,10 @@
 # Arian Mirahmadi
 
 I'm Arian Mirahmadi, a **front-end/full-stack web developer**.  
-With **3+ years** of web development experience,
-and 7+ years of computer engineering self-education.  
+with **3+ years** of web development experience,
+and 7+ years of computer engineering self-education.  CV
 
-## CV
-
-[Download PDF](/Arian-Mirahmadi-Frontend-Fullstack.pdf)
+[CV and Experiences](/Arian-Mirahmadi-Frontend-Fullstack.pdf)
 
 ## Socials and Contact
 
