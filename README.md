@@ -2,7 +2,7 @@
 
 I'm Arian Mirahmadi, a **front-end/full-stack web developer**.  
 with **3+ years** of web development experience,
-and 7+ years of computer engineering self-education.  CV
+and 7+ years of computer engineering self-education.  
 
 [CV and Experiences](/Arian-Mirahmadi-Frontend-Fullstack.pdf)
 
