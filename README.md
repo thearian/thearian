@@ -5,8 +5,8 @@ with **3+ years** of web development experience,
 and 7+ years of computer engineering self-education.  
 
 ## CV
-[View in MarkDown](/CV/Arian-Mirahmadi-Frontend-Fullstack.pdf)  
-[Download in PDF](/CV/CV.md)
+[View in Markdown](/CV/CV.md)
+[Download in PDF](/CV/Arian-Mirahmadi-Frontend-Fullstack.pdf)  
 
 ## Socials and Contact
 
@@ -15,7 +15,7 @@ and 7+ years of computer engineering self-education.
 <td>
     <a href="https://medium.com/@mirarianmir">
     <img
-        srcset="https://img.icons8.com/ios-glyphs/344/medium-logo.png 2x"
+        src="https://img.icons8.com/ios-glyphs/344/medium-logo.png"
         alt="medium-icon"
         width="50"
         style="filter:invert(50%);"
@@ -25,7 +25,7 @@ and 7+ years of computer engineering self-education.
 <td>
     <a href="https://unsplash.com/@arianmir">
     <img
-        srcset="https://img.icons8.com/material-rounded/344/unsplash--v2.png 2x"
+        src="https://img.icons8.com/material-rounded/344/unsplash--v2.png"
         alt="unsplash-icon"
         width="50"
         style="filter:invert(50%);"
@@ -35,7 +35,7 @@ and 7+ years of computer engineering self-education.
 <td>
     <a href="mailto:mirarianmir@gmail.com">
     <img
-        srcset="https://img.icons8.com/ios-filled/344/gmail-new.png 2x"
+        src="https://img.icons8.com/ios-filled/344/gmail-new.png"
         alt="gmail-icon"
         width="50"
         style="filter:invert(50%);"
@@ -45,7 +45,7 @@ and 7+ years of computer engineering self-education.
 <td>
     <a href="https://medium.com/@mirarianmir">
     <img
-        srcset="https://img.icons8.com/ios-filled/344/telegram-app.png 2x"
+        src="https://img.icons8.com/ios-filled/344/telegram-app.png"
         alt="telegram-icon"
         width="50"
         style="filter:invert(50%);"
