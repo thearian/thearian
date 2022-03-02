@@ -5,7 +5,7 @@ with **3+ years** of web development experience,
 and 7+ years of computer engineering self-education.  
 
 ## CV
-[View in Markdown](/CV/CV.md)
+[View in Markdown](/CV/CV.md)  
 [Download in PDF](/CV/Arian-Mirahmadi-Frontend-Fullstack.pdf)  
 
 ## Socials and Contact
