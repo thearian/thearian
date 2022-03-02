@@ -20,7 +20,7 @@ Iran Tehran, Remote
 </tr>
 </table>
 
----
+
 
 ## SKILLS
 
@@ -32,7 +32,7 @@ Iran Tehran, Remote
 
 - **Tools:** git , github , gitlab , CI/CD , vsc , vim
 
----
+
 
 ## EXPERIENCE
 
@@ -115,7 +115,7 @@ SPEED RUN IN 3 DAYS
 
 <a href="https://github.com/thearian/funeral">View Source Code - https://github.com/thearian/funeral</a>
 
----
+
 
 <table>
 <tr>
