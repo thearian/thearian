@@ -9,6 +9,7 @@ export const experiences: IExperience[] = [
     location: "Istanbul",
     workingType: ["Full Time", "Remote"],
     imgs: ["3.png", "3.1.png"],
+    logo: "nyx.png",
     dates: [
       dateByYear(2021, 11, 1),
       new Date()
@@ -26,6 +27,7 @@ export const experiences: IExperience[] = [
     location: "Tehran",
     workingType: ["Full Time","Remote", "Hybrid"],
     imgs: ["1.png", "1.1.jpg", "1.2.jpg"],
+    logo: "infosaba.png",
     dates: [
       dateByYear(2021, 4, 1),
       dateByYear(2021, 11, 1)
@@ -44,6 +46,7 @@ export const experiences: IExperience[] = [
     location: "Isfahan",
     workingType: "Part Time",
     imgs: ["2.png"],
+    logo: "siwan.png",
     dates: [
       dateByYear(2021, 3, 1),
       dateByYear(2021, 6, 1)

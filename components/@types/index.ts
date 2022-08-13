@@ -1,9 +1,10 @@
 export interface IExperience {
   company: string
-  title: keyof IJobTitle
   location: keyof ICity
+  title: keyof IJobTitle
   workingType: keyof IWorkingType | (keyof IWorkingType)[]
   imgs: string[]
+  logo: string
   dates: Date[]
   techs: string[]
   challenges: string[]
