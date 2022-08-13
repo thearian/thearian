@@ -3,7 +3,9 @@ import Image from 'next/image'
 import {useState} from 'react'
 import styles from '../../styles/Experience.module.css'
 import {diffMonths, displayDate} from '../../utils/data'
+import TechIcon from '../TechIcon'
 import {Props, IDisplayForm} from './@types'
+import {LinkIcon, EyeOffIcon, OfficeBuildingIcon} from '@heroicons/react/outline'
 
 const Experience: NextPage<Props> = ({ data }) => {
   const [form, setForm] = useState<keyof IDisplayForm>("fit")
@@ -44,10 +46,13 @@ const Experience: NextPage<Props> = ({ data }) => {
               <h2 className='inline font-bold text-gray-900'>
                 { data.title }
               </h2>
-              <div className='text-gray-500 text-sm font-semibold'>
+              <div className='flex flex-row items-center text-gray-500 text-sm font-semibold'>
+                { form == "full" &&
+                  <OfficeBuildingIcon className='w-5 h-5 mr-2' />
+                }
                 { data.company }
                 { form == "full" &&
-                  <span className='inline'> | { data.location } </span>
+                  <span className='ml-1'> | { data.location } </span>
                 }
               </div>
               { form == "full" &&
@@ -75,6 +80,18 @@ const Experience: NextPage<Props> = ({ data }) => {
           }
         </div>
 
+        { form == "full" &&
+          <div className='w-full flex flex-row mt-3 flex-wrap gap-2'>
+            {
+              data.techs.map(tech => 
+              <div className='opacity-40' key={tech}>
+                <TechIcon icon={tech} size={30} />
+              </div>
+              )
+            }
+          </div>
+        }
+
         <div className='text-gray-700 text-lg'>
           { data.challenges.map(challenge => 
             <p key={challenge} className='mt-2 ml-2'>
@@ -82,6 +99,29 @@ const Experience: NextPage<Props> = ({ data }) => {
             </p>
            ) }
         </div>
+
+        { form == "full" &&
+          <div className='w-full flex flex-row justify-end gap-x-3 mt-3'>
+            <a 
+              className='flex flex-row items-center bg-gray-100 text-gray-400 py-2 px-5 rounded-lg'
+              href={data.url}
+            >
+              { data.source ?
+                <TechIcon icon='github' size={25} /> :
+                <EyeOffIcon className='w-5 h-5 mr-2' />
+              }
+              { data.source ? 'View Source code' : 'Source code is protected' }
+            </a>
+
+            <a 
+              className='flex flex-row items-center bg-sky-600 text-white font-semibold py-2 px-5 rounded-lg'
+              href={data.url}
+            >
+              <LinkIcon className='w-5 h-5 mr-2' />
+              View Website
+            </a>
+          </div>
+        }
       </div>
     </div>
   )
