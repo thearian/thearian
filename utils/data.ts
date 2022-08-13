@@ -15,5 +15,7 @@ export function displayDate(date: Date): string {
 }
 
 export function diffMonths(date1: Date, date2: Date): number {
-  return (new Date(date2 - date1)).getMonth()
+  const diff = date2.getTime() - date1.getTime()
+  const diffDate = new Date(diff)
+  return diffDate.getMonth()
 }
