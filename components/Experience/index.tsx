@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import {useState} from 'react'
 import styles from '../../styles/Experience.module.css'
+import {diffMonths, displayDate} from '../../utils/data'
 import {Props, IDisplayForm} from './@types'
 
 const Experience: NextPage<Props> = ({ data }) => {
@@ -15,7 +16,7 @@ const Experience: NextPage<Props> = ({ data }) => {
     })
   }
 
-  const matchForm = (config: IDisplayForm) => {
+  const switchForm = (config: IDisplayForm) => {
     switch (form) {
       case "fit": return config.fit
       case "full": return config.full
@@ -25,39 +26,55 @@ const Experience: NextPage<Props> = ({ data }) => {
   return (
     <div className={
         styles.container + " " +
-        matchForm({fit: styles.container_fit, full: styles.container_full})
+        switchForm({fit: styles.container_fit, full: styles.container_full})
     } onClick={expand}>
       <div className={styles.card}>
-        <div className='flex flex-row'>
-          <div className='mr-2'>
-            <Image
-              alt={data.logo}
-              src={`/../public/${data.logo}`}
-              className='relative rounded-xl z-0'
-              width={matchForm({fit: "50", full: "100"})}
-              height={matchForm({fit: "50", full: "100"})}
-            />
-          </div>
-          <div>
-            <h2 className='font-bold text-gray-900'>
-              { data.title }
-            </h2>
-            <div className='text-gray-500 text-sm font-semibold'>
-              { data.company }
-              { form == "full" &&
-                <span className='inline'> | { data.location } </span>
-              }
+        <div className='flex flex-col gap-y-3 md:flex-row justify-between'>
+          <div className='flex flex-row'>
+            <div className='mr-2'>
+              <Image
+                alt={data.logo}
+                src={`/../public/${data.logo}`}
+                className='grayscale relative rounded-xl z-0'
+                width={switchForm({fit: "40", full: "75"})}
+                height={switchForm({fit: "40", full: "75"})}
+              />
             </div>
-            { form == "full" &&
-              <div className='text-gray-500 text-sm italic'>
-                { typeof data.workingType == 'string' ?
-                  data.workingType :
-                  data.workingType.join(' | ')
+            <div>
+              <h2 className='inline font-bold text-gray-900'>
+                { data.title }
+              </h2>
+              <div className='text-gray-500 text-sm font-semibold'>
+                { data.company }
+                { form == "full" &&
+                  <span className='inline'> | { data.location } </span>
                 }
               </div>
-            }
+              { form == "full" &&
+                <div className='text-gray-500 text-sm italic'>
+                  { typeof data.workingType == 'string' ?
+                      data.workingType :
+                      data.workingType.join(' | ')
+                  }
+                </div>
+              }
+            </div>
           </div>
+
+          { form == "full" &&
+            <div className='flex flex-row gap-x-3 md:flex-col text-xs text-gray-400 self-start text-right'>
+              <span className='uppercase'>
+                { displayDate(data.dates[0]) }
+                ~
+                { displayDate(data.dates[1]) }
+              </span>
+              <span>
+                ({ diffMonths(data.dates[0], data.dates[1]) } months)
+              </span>
+            </div>
+          }
         </div>
+
         <div className='text-gray-700 text-lg'>
           { data.challenges.map(challenge => 
             <p key={challenge} className='mt-2 ml-2'>
