@@ -12,6 +12,7 @@ const TechIcon: NextPage<Props> = ({ icon, size }) => {
     alt={icon}
     width={size}
     height={size}
+    className='inline-flex'
     src={`https://unpkg.com/simple-icons@v7/icons/${icon}.svg`}
   />
 }

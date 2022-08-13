@@ -1,25 +1,41 @@
 import type { NextPage } from 'next'
 import HintItem from '../HintItem'
+import styles from '../../styles/SideNav.module.css'
 
 const SideNav: NextPage = () => {
   return (
-    <div className='flex flex-col gap-y-7 p-5 w-full md:w-1/4 md:ml-2 lg:w-1/6 lg:ml-5'>
-      <div className='text-gray-800'>
-        <HintItem>
-          Senior FullStack
-        </HintItem>
+    <div className={styles.container}>
+      <div>
+        <HintItem> Senior FullStack </HintItem>
+        <HintItem> Web Developer </HintItem>
+        <HintItem> Product Manager </HintItem>
+        <HintItem> Open Source Maintainer </HintItem>
+      </div>
 
-        <HintItem>
-          Web Developer
-        </HintItem>
+      <div className={styles.skills}>
+        <div>
+          <div className={styles.badge}>
+            <span> Skills </span>
+          </div>
+          <HintItem> Product Management </HintItem>
+          <HintItem> Documenting </HintItem>
+          <HintItem> Teaching </HintItem>
+          <HintItem> Marketing </HintItem>
+          <HintItem> Branding </HintItem>
+        </div>
 
-        <HintItem>
-          Product Manager
-        </HintItem>
-
-        <HintItem>
-          Open Source Maintainer
-        </HintItem>
+        <div>
+          <div className={styles.badge}>
+            <span> Techs </span>
+          </div>
+          <HintItem> Typescript </HintItem>
+          <HintItem> React js </HintItem>
+          <HintItem> Vue js </HintItem>
+          <HintItem> Node js </HintItem>
+          <HintItem> Graphql </HintItem>
+          <HintItem> Mongo db </HintItem>
+          <HintItem> Postgresql </HintItem>
+        </div>
       </div>
     </div>
   )
