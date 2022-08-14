@@ -19,3 +19,15 @@
 .container_full .card {
   @apply bg-white border shadow shadow-2xl m-10 md:w-2/3 lg:w-1/2
 }
+
+.button {
+  @apply flex flex-row items-center py-1 px-3 rounded-full;
+}
+
+.primary_button {
+ @apply button bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold;
+}
+
+.secondary_button {
+  @apply button bg-gray-100 text-gray-400;
+}
