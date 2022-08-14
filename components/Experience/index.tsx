@@ -26,10 +26,14 @@ const Experience: NextPage<Props> = ({ data }) => {
   }
 
   return (
-    <div className={
+    <div 
+      className={
         styles.container + " " +
         switchForm({fit: styles.container_fit, full: styles.container_full})
-    } onClick={expand}>
+      }
+      onClick={expand}
+      style={{ animation: `Experience_float__Gwy58  1s ${data.id}00ms` }}
+    >
       <div className={styles.card}>
         <div className='flex flex-col gap-y-3 md:flex-row justify-between'>
           <div className='flex flex-row'>

@@ -1,4 +1,5 @@
 export interface IExperience {
+  id: number
   company: string
   location: keyof ICity
   title: keyof IJobTitle
