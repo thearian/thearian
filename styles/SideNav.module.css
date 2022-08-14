@@ -7,9 +7,9 @@
 }
 
 .badge {
-  @apply text-center mb-1;
+  @apply text-center mb-1 tracking-[.25em];
 }
 
 .badge>span {
-  @apply inline text-xs uppercase py-0.5 px-3 font-semibold rounded bg-gray-200 text-gray-600;
+  @apply inline text-xs uppercase py-0.5 px-3 font-bold text-sky-600;
 }
