@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <main className='flex flex-col md:flex-row'>
         <SideNav />
 
-        <div className='md:w-3/4 lg:w-5/6 flex flex-col md:flex-row md:flex-wrap'>
+        <div className='h-fit md:w-3/4 lg:w-5/6 flex flex-col md:flex-row md:flex-wrap'>
           { experiences.map(job => <Experience key={job.company} data={job} />) }
         </div>
       </main>

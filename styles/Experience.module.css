@@ -1,5 +1,5 @@
 .container {
-  @apply transition duration-100 ease-in-out;
+  @apply transition duration-100 ease-in-out p-2;
 }
 
 .container_fit {
@@ -13,11 +13,15 @@
 }
 
 .card {
-  @apply bg-gray-100 p-5 m-4 rounded-xl;
+  @apply bg-gray-100 rounded-2xl;
+}
+
+.container_fit .card {
+  @apply h-full p-3;
 }
 
 .container_full .card {
-  @apply bg-white border shadow shadow-2xl m-10 md:w-2/3 lg:w-1/2
+  @apply p-7 bg-white border shadow shadow-2xl m-10 md:w-2/3 lg:w-1/2
 }
 
 .button {
