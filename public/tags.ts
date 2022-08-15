@@ -1,14 +1,14 @@
-export type ITag = keyof Titles | keyof SocialSkills
+export type ITag = keyof typeof Titles | keyof typeof SocialSkills
 
-interface Titles {
-  "Senior Full Stack": string
-  "Web Developer": string
-  "Product Manager": string
-  "Open Source Maintainer": string
+export const Titles = {
+  "Senior Full Stack": "",
+  "Web Developer": "",
+  "Product Manager": "",
+  "Open Source Maintainer": ""
 }
 
-interface SocialSkills {
-  "Teaching": string
-  "Marketing": string
-  "Branding": string
+export const SocialSkills = {
+  "Teaching": "",
+  "Marketing": "",
+  "Branding": ""
 }

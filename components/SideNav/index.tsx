@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
 import HintItem from '../HintItem'
 import styles from '../../styles/SideNav.module.css'
+import {SocialSkills, Titles} from '../../public/tags'
 
 const SideNav: NextPage = () => {
   return (
     <div className={styles.container}>
       <div>
-        <HintItem> Senior FullStack </HintItem>
-        <HintItem> Web Developer </HintItem>
-        <HintItem> Product Manager </HintItem>
-        <HintItem> Open Source Maintainer </HintItem>
+        { Object.keys(Titles).map(myTitle => 
+          <HintItem key={myTitle}> { myTitle } </HintItem>
+        ) }
       </div>
 
       <div className={styles.skills}>
@@ -17,11 +17,9 @@ const SideNav: NextPage = () => {
           <div className={styles.badge}>
             <span> Skills </span>
           </div>
-          <HintItem> Product Management </HintItem>
-          <HintItem> Documenting </HintItem>
-          <HintItem> Teaching </HintItem>
-          <HintItem> Marketing </HintItem>
-          <HintItem> Branding </HintItem>
+          { Object.keys(SocialSkills).map(skill => 
+            <HintItem key={skill}> { skill } </HintItem>
+          ) }
         </div>
 
         <div>
