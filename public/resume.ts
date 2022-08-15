@@ -87,5 +87,5 @@ export function getExperiencedTechs (experiences: IExperience[]): string[] {
 
   return Object.entries(hashList)
     .sort((a, b) => b[1] - a[1])
-    .map(hashItem => hashItem[0].replaceAll("dot", "."))
+    .map(hashItem => hashItem[0])
 }

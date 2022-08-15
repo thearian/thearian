@@ -4,6 +4,7 @@ import styles from '../../styles/SideNav.module.css'
 import {ITag, SocialSkills, Titles} from '../../public/tags'
 import {IExperience} from '../@types'
 import {experiences, getExperiencedTechs} from '../../public/resume'
+import TechIcon from '../TechIcon'
 
 interface Props {
   focus?: IExperience | null
@@ -11,9 +12,8 @@ interface Props {
 
 const SideNav: NextPage<Props> = ({ focus }) => {
   const techs = getExperiencedTechs(experiences)
-  const focusTitles = focus?.tags
   
-  const matchAny = (item: ITag, list?: ITag[]): boolean => {
+  const matchAny = <T,>(item: T, list?: T[]): boolean => {
     if (!list) return false
     const matchedItems = list.filter(listItem => listItem == item)
     if (matchedItems.length == 0 ) return false
@@ -24,7 +24,12 @@ const SideNav: NextPage<Props> = ({ focus }) => {
     <div className={styles.container}>
       <div>
         { Object.keys(Titles).map(myTitle => 
-          <HintItem activated={matchAny(myTitle as ITag, focusTitles)} key={myTitle}> { myTitle } </HintItem>
+          <HintItem 
+            activated={matchAny(myTitle as ITag, focus?.tags)} 
+            key={myTitle}
+          >
+            { myTitle }
+          </HintItem>
         ) }
       </div>
 
@@ -34,7 +39,12 @@ const SideNav: NextPage<Props> = ({ focus }) => {
             <span> Skills </span>
           </div>
           { Object.keys(SocialSkills).map(skill => 
-            <HintItem key={skill}> { skill } </HintItem>
+              <HintItem
+                activated={matchAny(skill as ITag, focus?.tags)}
+                key={skill}
+              >
+                { skill }
+              </HintItem>
           ) }
         </div>
 
@@ -43,7 +53,17 @@ const SideNav: NextPage<Props> = ({ focus }) => {
             <span> Techs </span>
           </div>
           { techs.map(tech => 
-            <HintItem key={tech}> { tech } </HintItem>
+            <HintItem
+              activated={matchAny(tech, focus?.techs)}
+              key={tech}
+            >
+              <TechIcon icon={tech} className={
+                  `${matchAny(tech, focus?.techs) ? "filter-bg-blue-500" : 'opacity-70'} transition transition-color `
+              } size={18} />
+              <span className='ml-2'>
+                { tech.replaceAll("dot", " ") }
+            </span>
+            </HintItem>
           ) }
         </div>
       </div>
