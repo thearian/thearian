@@ -18,7 +18,7 @@
 }
 
 .container_fit .card {
-  @apply bg-gray-100 hover:bg-gray-200 h-full p-3;
+  @apply bg-gray-100 transition hover:bg-gray-50 h-full p-3;
 }
 
 .container_full .card {
