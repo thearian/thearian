@@ -22,30 +22,32 @@ const SideNav: NextPage<Props> = ({ focus }) => {
 
   return (
     <div className={styles.container}>
-      <div>
-        { Object.keys(Titles).map(myTitle => 
-          <HintItem 
-            activated={matchAny(myTitle as ITag, focus?.tags)} 
-            key={myTitle}
-          >
-            { myTitle }
-          </HintItem>
-        ) }
-      </div>
-
       <div className={styles.skills}>
-        <div>
-          <div className={styles.badge}>
-            <span> Skills </span>
-          </div>
-          { Object.keys(SocialSkills).map(skill => 
-              <HintItem
-                activated={matchAny(skill as ITag, focus?.tags)}
-                key={skill}
+        <div className='flex flex-col gap-y-7'>
+          <div>
+            { Object.keys(Titles).map(myTitle => 
+              <HintItem 
+                activated={matchAny(myTitle as ITag, focus?.tags)} 
+                key={myTitle}
               >
-                { skill }
+                { myTitle }
               </HintItem>
-          ) }
+            ) }
+          </div>
+
+          <div>
+            <div className={styles.badge}>
+              <span> Skills </span>
+            </div>
+            { Object.keys(SocialSkills).map(skill => 
+                <HintItem
+                  activated={matchAny(skill as ITag, focus?.tags)}
+                  key={skill}
+                >
+                  { skill }
+                </HintItem>
+            ) }
+          </div>
         </div>
 
         <div>
