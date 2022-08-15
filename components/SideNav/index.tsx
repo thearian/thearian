@@ -3,12 +3,14 @@ import HintItem from '../HintItem'
 import styles from '../../styles/SideNav.module.css'
 import {ITag, SocialSkills, Titles} from '../../public/tags'
 import {IExperience} from '../@types'
+import {experiences, getExperiencedTechs} from '../../public/resume'
 
 interface Props {
   focus?: IExperience | null
 }
 
 const SideNav: NextPage<Props> = ({ focus }) => {
+  const techs = getExperiencedTechs(experiences)
   const focusTitles = focus?.tags
   
   const matchAny = (item: ITag, list?: ITag[]): boolean => {
@@ -40,13 +42,9 @@ const SideNav: NextPage<Props> = ({ focus }) => {
           <div className={styles.badge}>
             <span> Techs </span>
           </div>
-          <HintItem> Typescript </HintItem>
-          <HintItem> React js </HintItem>
-          <HintItem> Vue js </HintItem>
-          <HintItem> Node js </HintItem>
-          <HintItem> Graphql </HintItem>
-          <HintItem> Mongo db </HintItem>
-          <HintItem> Postgresql </HintItem>
+          { techs.map(tech => 
+            <HintItem key={tech}> { tech } </HintItem>
+          ) }
         </div>
       </div>
     </div>
