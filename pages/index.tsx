@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <Header />
 
       <main className='flex flex-col md:flex-row'>
-        <SideNav />
+        <SideNav focus={focus} />
 
         <div className='h-fit md:w-3/4 lg:w-5/6 flex flex-col md:flex-row md:flex-wrap'>
           { experiences.map(job =>
