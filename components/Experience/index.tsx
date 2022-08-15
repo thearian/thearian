@@ -7,7 +7,7 @@ import TechIcon from '../TechIcon'
 import {Props, IDisplayForm} from './@types'
 import {LinkIcon, EyeOffIcon, OfficeBuildingIcon} from '@heroicons/react/outline'
 
-const Experience: NextPage<Props> = ({ data }) => {
+const Experience: NextPage<Props> = ({ data, onFocus }) => {
   const [form, setForm] = useState<keyof IDisplayForm>("fit")
 
   const expand = () => {
@@ -25,6 +25,9 @@ const Experience: NextPage<Props> = ({ data }) => {
     }
   }
 
+  const handleFocusEnter = () => { onFocus(data) }
+  const handleFocusLeave = () => { onFocus(null) }
+
   return (
     <div 
       className={
@@ -32,6 +35,8 @@ const Experience: NextPage<Props> = ({ data }) => {
         switchForm({fit: styles.container_fit, full: styles.container_full})
       }
       onClick={expand}
+      onMouseEnter={handleFocusEnter}
+      onMouseLeave={handleFocusLeave}
       style={{ animation: `Experience_float__Gwy58  1s ${data.id}00ms` }}
     >
       <div className={styles.card}>

@@ -1,3 +1,5 @@
+import {ITag} from "../../public/tags"
+
 export interface IExperience {
   id: number
   company: string
@@ -11,6 +13,7 @@ export interface IExperience {
   challenges: string[]
   source?: string
   url: string
+  tags: ITag[]
 }
 
 interface IJobTitle {

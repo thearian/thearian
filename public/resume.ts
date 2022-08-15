@@ -20,7 +20,11 @@ export const experiences: IExperience[] = [
       'Remade and developed a forex brokerage dashboard frontend',
       'Re-engineered the backend structure for the best development'
     ],
-    url: "https://nyxmarket.com"
+    url: "https://nyxmarket.com",
+    tags: [
+      "Senior Full Stack",
+      "Web Developer"
+    ]
   },
   {
     id: 2,
@@ -39,7 +43,10 @@ export const experiences: IExperience[] = [
       'Designed and implemented both backend and frontend of an in app social network with messenger',
       'Enhanced the main database performance to over 15x better response time'
     ],
-    url: "https://infosaba.com"
+    url: "https://infosaba.com",
+    tags: [
+      "Web Developer",
+    ]
   },
 
   {
@@ -58,6 +65,10 @@ export const experiences: IExperience[] = [
     challenges: [
       'Implemented a presentive website with ecommerce, blog and a custom admin panel'
     ],
-    url: "https://infosaba.com"
+    url: "https://infosaba.com",
+    tags: [
+      "Web Developer",
+      "Product Manager"
+    ]
   },
 ]
