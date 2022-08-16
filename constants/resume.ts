@@ -3,6 +3,33 @@ import {dateByYear} from "../utils/date";
 
 export const experiences: IExperience[] = [
   {
+    company: "Armico Marketing",
+    title: "Executive Manager",
+    location: "Tehran",
+    workingType: "Full Time",
+    logo: "armico.png",
+    dates: [
+      dateByYear(2022, 5, 1),
+      new Date()
+    ],
+    techs: ['typescript', 'react', 'nextdotjs', 'tailwindcss', 'nodedotjs', 'postgresql', 'vuedotjs', 'nuxtdotjs', 'apollographql', 'graphql'],
+    challenges: [
+      'Designed the branding',
+      'Implemented all marketing services',
+      'Teached junior developers and hired them'
+    ],
+    url: "https://armi-co.com",
+    tags: [
+      "Teaching",
+      "Branding",
+      "Marketing",
+      "Executive Manager",
+      "Senior Full Stack",
+      "Web Developer"
+    ]
+  },
+
+  {
     company: "Nyx Broker",
     title: "Senior Full Stack Developer",
     location: "Istanbul",
@@ -11,7 +38,7 @@ export const experiences: IExperience[] = [
     logo: "nyx.png",
     dates: [
       dateByYear(2021, 11, 1),
-      new Date()
+      dateByYear(2022, 6, 1),
     ],
     techs: ['typescript', 'react', 'nextdotjs', 'tailwindcss', 'nodedotjs', 'postgresql', 'mysql'],
     challenges: [
@@ -25,6 +52,21 @@ export const experiences: IExperience[] = [
       "Web Developer"
     ]
   },
+
+  {
+    projectName: "volu",
+    title: "Maintainer",
+    techs: ['rust','shell','gnubash'],
+    challenges: [
+      "Engineered a scalable CLI tool using Rust",
+      "Enhanced the performance (40x)",
+      "Documented the development and made the project Open Source "
+    ],
+    source: "https://github.com/thearian/volu",
+    tags: [ "Open Source Maintainer" ]
+  },
+  
+
   {
     company: "Infosaba",
     title: "Full Stack Developer",
@@ -38,7 +80,7 @@ export const experiences: IExperience[] = [
     ],
     techs: ['typescript', 'react', 'nodedotjs', 'graphql', 'apollographql', 'mongodb'],
     challenges: [
-      'Re-engineered database for better performance (15 X)',
+      'Re-engineered database for better performance (15x)',
       'Implemented an in-app Social Network with integrated Messenger',
     ],
     url: "https://infosaba.com",

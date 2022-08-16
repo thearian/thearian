@@ -7,8 +7,8 @@ export interface Props {
 }
 
 export interface IDisplayForm {
-  fit: string
-  full: string
+  fit: string | number
+  full: string | number
 }
 
 

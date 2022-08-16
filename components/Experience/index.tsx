@@ -43,13 +43,19 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
         <div className='flex flex-col gap-y-3 md:flex-row justify-between'>
           <div className='flex flex-row'>
             <div className='mr-2'>
-              <Image
-                alt={data.logo}
-                src={`/../public/${data.logo}`}
-                className='grayscale relative rounded-xl z-0'
-                width={switchForm({fit: "40", full: "75"})}
-                height={switchForm({fit: "40", full: "75"})}
-              />
+              {
+                "logo" in data ? <Image
+                  alt={data.logo}
+                  src={`/../public/${data.logo}`}
+                  className='grayscale relative rounded-xl z-0'
+                  width={switchForm({fit: 40, full: 75})}
+                  height={switchForm({fit: 40, full: 75})}
+                /> : <TechIcon
+                  icon={data.techs[0]}
+                  className="opacity-70"
+                  size={switchForm({fit: 40, full: 75}) as number}
+                />
+              }
             </div>
             <div>
               <h2 className='inline font-bold text-gray-900'>
@@ -59,12 +65,14 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
                 { form == "full" &&
                   <OfficeBuildingIcon className='w-5 h-5 mr-2' />
                 }
-                { data.company }
-                { form == "full" &&
+                @{' '}
+                { "company" in data && data.company }
+                { "projectName" in data && data.projectName }
+                { form == "full" && "location" in data &&
                   <span className='ml-1'> | { data.location } </span>
                 }
               </div>
-              { form == "full" &&
+              { form == "full" && "workingType" in data &&
                 <div className='text-gray-500 text-sm italic'>
                   { typeof data.workingType == 'string' ?
                       data.workingType :
@@ -75,7 +83,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
             </div>
           </div>
 
-          { form == "full" &&
+          { form == "full" && "dates" in data &&
             <div className='flex flex-row gap-x-3 md:flex-col text-xs text-gray-400 self-start text-right'>
               <span className='uppercase'>
                 { displayDate(data.dates[0]) }
@@ -112,23 +120,30 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
         { form == "full" &&
           <div className='w-full flex flex-row justify-end gap-x-3 mt-3'>
             <a 
-              className={styles.secondary_button}
+              className={
+                data.source ?
+                  styles.secondary_button_active : 
+                  styles.secondary_button_hidden
+              }
               href={data.source}
             >
               { data.source ?
-                <TechIcon icon='github' size={25} /> :
-                <EyeOffIcon className='w-5 h-5 mr-2' />
+                <TechIcon icon='github' size={25} className='opacity-90 invert' /> :
+                <EyeOffIcon className='w-5 h-5' />
               }
-              { data.source ? 'View Source code' : 'Source code is protected' }
+              <span className='ml-2'>
+                { data.source ? 'View Source code' : 'Source code is protected' }
+              </span>
             </a>
 
-            <a 
-              className={styles.primary_button}
-              href={data.url}
-            >
-              <LinkIcon className='w-5 h-5 mr-2' />
-              View Website
-            </a>
+              { "url" in data && <a 
+                  className={styles.primary_button}
+                  href={data.url}
+                >
+                <LinkIcon className='w-5 h-5 mr-2' />
+                View Website
+              </a>
+              }
           </div>
         }
       </div>

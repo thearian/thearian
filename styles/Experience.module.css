@@ -26,15 +26,19 @@
 }
 
 .button {
-  @apply flex flex-row items-center py-1 px-3 rounded-full;
+  @apply flex flex-row items-center py-1 rounded-full;
 }
 
 .primary_button {
- @apply button bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold;
+ @apply button bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold px-3;
 }
 
-.secondary_button {
-  @apply button bg-gray-100 text-gray-400;
+.secondary_button_hidden {
+  @apply button bg-gray-100 text-gray-400 px-3;
+}
+
+.secondary_button_active {
+  @apply button text-white bg-gray-900 pl-1 pr-3;
 }
 
 @keyframes FloatIn {

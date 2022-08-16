@@ -4,6 +4,7 @@ export const Titles = {
   "Senior Full Stack": "",
   "Web Developer": "",
   "Product Manager": "",
+  "Executive Manager": "",
   "Open Source Maintainer": ""
 }
 
