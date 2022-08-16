@@ -3,7 +3,6 @@ import {dateByYear} from "../utils/date";
 
 export const experiences: IExperience[] = [
   {
-    id: 1,
     company: "Nyx Broker",
     title: "Senior Full Stack Developer",
     location: "Istanbul",
@@ -27,7 +26,6 @@ export const experiences: IExperience[] = [
     ]
   },
   {
-    id: 2,
     company: "Infosaba",
     title: "Full Stack Developer",
     location: "Tehran",
@@ -50,7 +48,6 @@ export const experiences: IExperience[] = [
   },
 
   {
-    id: 3,
     company: "Siwan Tech",
     title: "Full Stack Developer",
     location: "Isfahan",
