@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import {useState} from 'react'
-import {IExperience} from '../components/@types'
+import {IExperience} from '../@types'
 import Experience from '../components/Experience'
 import Header from '../components/Header'
 import SideNav from '../components/SideNav'
 import TopBar from '../components/TopBar'
-import {experiences} from '../public/resume'
+import {experiences} from '../constants/resume'
 
 const Home: NextPage = () => {
   const [focus, setFocus] = useState<IExperience | null>(null)

@@ -1,4 +1,4 @@
-import {ITag} from "../../public/tags"
+import {ITag} from "./tag"
 
 export interface IExperience {
   id: number

@@ -1,4 +1,4 @@
-import {IExperience} from '../@types'
+import {IExperience} from '../../@types'
 
 export interface Props {
   data: IExperience

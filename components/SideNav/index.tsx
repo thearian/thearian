@@ -1,17 +1,18 @@
 import type { NextPage } from 'next'
 import HintItem from '../HintItem'
 import styles from '../../styles/SideNav.module.css'
-import {ITag, SocialSkills, Titles} from '../../public/tags'
-import {IExperience} from '../@types'
-import {experiences, getExperiencedTechs} from '../../public/resume'
+import {ITag, SocialSkills, Titles} from '../../@types/tag'
+import {IExperience} from '../../@types'
+import {experiences} from '../../constants/resume'
 import TechIcon from '../TechIcon'
+import {useExperiencedTechs} from '../../hooks/useExperienceTechs'
 
 interface Props {
   focus?: IExperience | null
 }
 
 const SideNav: NextPage<Props> = ({ focus }) => {
-  const techs = getExperiencedTechs(experiences)
+  const techs = useExperiencedTechs(experiences)
   
   const matchAny = <T,>(item: T, list?: T[]): boolean => {
     if (!list) return false

@@ -9,7 +9,6 @@ export function displayDate(date: Date): string {
   const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
     month: "short",
-
   }
   return date.toLocaleDateString("en-us", options)
 }
