@@ -16,7 +16,8 @@ export const experiences: IExperience[] = [
     ],
     techs: ['typescript', 'react', 'nextdotjs', 'tailwindcss', 'nodedotjs', 'postgresql', 'mysql'],
     challenges: [
-      'Remade and developed a forex brokerage dashboard frontend',
+      'Fixed bugs of a forex brokerage',
+      'Remaid the frontend dashboard for better user experience',
       'Re-engineered the backend structure for the best development'
     ],
     url: "https://nyxmarket.com",
@@ -39,8 +40,8 @@ export const experiences: IExperience[] = [
     ],
     techs: ['typescript', 'react', 'nodedotjs', 'graphql', 'apollographql', 'mongodb'],
     challenges: [
-      'Designed and implemented both backend and frontend of an in app social network with messenger',
-      'Enhanced the main database performance to over 15x better response time'
+      'Re-engineered database for better performance (15 X)',
+      'Implemented an in-app Social Network with integrated Messenger',
     ],
     url: "https://infosaba.com",
     tags: [
@@ -62,7 +63,8 @@ export const experiences: IExperience[] = [
     ],
     techs: ['vuedotjs', 'gridsome', 'tailwindcss', 'nodedotjs', 'graphql', 'apollographql', 'mongodb'],
     challenges: [
-      'Implemented a presentive website with ecommerce, blog and a custom admin panel'
+      'Implemented a presentive website with ecommerce, blog and a custom admin panel',
+      'Optimized for search engines'
     ],
     url: "https://infosaba.com",
     tags: [
