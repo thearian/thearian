@@ -111,4 +111,25 @@ export const experiences: IExperience[] = [
       "Product Manager"
     ]
   },
+{
+    company: "Weesh",
+    title: "Product Manager",
+    location: "Tehran",
+    workingType: "Part Time",
+    logo: "weesh.png",
+    dates: [
+      dateByYear(2020, 4, 1),
+      dateByYear(2020, 10, 1)
+    ],
+    techs: ['react', 'graphql', 'apollographql', 'nodedotjs'],
+    challenges: [
+      'Managed to achieve a weekly production update',
+      'Multiplied the user interactions using the Credit feature (an in-app money)',
+      'Grew community using in-app weekly challenges'
+    ],
+    url: "https://weeshme.netlify.app",
+    tags: [
+      "Product Manager"
+    ]
+  }
 ]

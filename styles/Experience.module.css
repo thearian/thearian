@@ -22,11 +22,15 @@
 }
 
 .container_full .card {
-  @apply p-7 bg-white border shadow shadow-2xl m-10 md:w-2/3 lg:w-1/2
+  @apply p-7 bg-white border shadow shadow-2xl m-3 md:w-2/3 lg:w-1/2
 }
 
 .button {
-  @apply flex flex-row items-center py-1 rounded-full;
+  @apply flex flex-row items-center p-3 md:py-1 rounded-xl md:rounded-full;
+}
+
+.button>span {
+  @apply hidden md:block;
 }
 
 .primary_button {

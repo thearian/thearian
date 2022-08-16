@@ -111,7 +111,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
 
         <div className='text-gray-700 text-lg'>
           { data.challenges.map(challenge => 
-            <p key={challenge} className='mt-2 ml-2'>
+            <p key={challenge} className='mt-2'>
               <b className='text-blue-600'>+</b> { challenge }
             </p>
            ) }
@@ -129,7 +129,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
             >
               { data.source ?
                 <TechIcon icon='github' size={25} className='opacity-90 invert' /> :
-                <EyeOffIcon className='w-5 h-5' />
+                <EyeOffIcon className='w-7 h-7 md:w-5 md:h-5' />
               }
               <span className='ml-2'>
                 { data.source ? 'View Source code' : 'Source code is protected' }
@@ -140,8 +140,10 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
                   className={styles.primary_button}
                   href={data.url}
                 >
-                <LinkIcon className='w-5 h-5 mr-2' />
-                View Website
+                <LinkIcon className='w-7 h-7 md:w-5 md:h-5' />
+                <span className='ml-2'>
+                  View Website
+                </span>
               </a>
               }
           </div>
