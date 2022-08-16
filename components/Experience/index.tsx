@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import {useState} from 'react'
-import styles from '../../styles/Experience.module.css'
 import {diffMonths, displayDate} from '../../utils/date'
 import TechIcon from '../TechIcon'
 import {Props, IDisplayForm} from './@types'
 import {LinkIcon, EyeOffIcon, OfficeBuildingIcon} from '@heroicons/react/outline'
+import styles from '../../styles/Experience.module.css'
+import delays from '../../styles/utils/Delays.module.css'
 
-const Experience: NextPage<Props> = ({ data, onFocus }) => {
+const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
   const [form, setForm] = useState<keyof IDisplayForm>("fit")
 
   const expand = () => {
@@ -31,13 +32,12 @@ const Experience: NextPage<Props> = ({ data, onFocus }) => {
   return (
     <div 
       className={
-        styles.container + " " +
+        styles.container + ' ' + delays[`delay-${delay}`] + ' ' +
         switchForm({fit: styles.container_fit, full: styles.container_full})
       }
       onClick={expand}
       onMouseEnter={handleFocusEnter}
       onMouseLeave={handleFocusLeave}
-      style={{ animation: `Experience_float__Gwy58  1s ${data.id}00ms` }}
     >
       <div className={styles.card}>
         <div className='flex flex-col gap-y-3 md:flex-row justify-between'>

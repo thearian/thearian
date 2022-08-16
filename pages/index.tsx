@@ -26,8 +26,8 @@ const Home: NextPage = () => {
         <SideNav focus={focus} />
 
         <div className='h-fit md:w-3/4 lg:w-5/6 flex flex-col md:flex-row md:flex-wrap'>
-          { experiences.map(job =>
-            <Experience key={job.company} data={job} onFocus={setFocus} />
+          { experiences.map((job, i) =>
+            <Experience delay={i * 100} key={job.company} data={job} onFocus={setFocus} />
           ) }
         </div>
       </main>
