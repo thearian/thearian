@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['unpkg.com'],
+    domains: [
+      'unpkg.com',
+      'arian.storage.iran.liara.space'
+    ],
   },
   experimental: {
     images: {

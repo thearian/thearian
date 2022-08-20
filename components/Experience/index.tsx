@@ -46,7 +46,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
               {
                 "logo" in data ? <Image
                   alt={data.logo}
-                  src={`/../public/${data.logo}`}
+                  src={`https://arian.storage.iran.liara.space/arianm/${data.logo}`}
                   className='grayscale relative rounded-xl z-0'
                   width={switchForm({fit: 40, full: 75})}
                   height={switchForm({fit: 40, full: 75})}
