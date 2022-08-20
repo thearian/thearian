@@ -9,7 +9,7 @@ interface Props {
 const HintItem: NextPage<Props> = ({ children, activated }) => {
   return (
     <div className={
-        `flex capitalize items-center px-2 py-0.5 transition transition-color hover:bg-gray-100 hover:text-gray-500 font-semibold rounded ${activated ? 'text-sky-500' : 'text-gray-600'}`
+        `flex capitalize items-center px-2 py-0.5 transition transition-color hover:bg-zinc-900 hover:text-zinc-500 font-semibold rounded ${activated ? 'text-green-500' : 'text-zinc-600'}`
     }>
       { children }
     </div>

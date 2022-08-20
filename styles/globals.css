@@ -9,3 +9,7 @@
 .filter-bg-blue-500 {
   filter: invert(46%) sepia(46%) saturate(4812%) hue-rotate(204deg) brightness(100%) contrast(93%);
 }
+
+.filter-bg-green-500 {
+  filter: invert(51%) sepia(59%) saturate(532%) hue-rotate(89deg) brightness(106%) contrast(102%);
+}

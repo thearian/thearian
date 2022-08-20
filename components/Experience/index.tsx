@@ -58,7 +58,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
               }
             </div>
             <div>
-              <h2 className='inline font-bold text-gray-900'>
+              <h2 className='inline font-bold text-zinc-300'>
                 { data.title }
               </h2>
               <div className='flex flex-row items-center text-gray-500 text-sm font-semibold'>
@@ -73,7 +73,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
                 }
               </div>
               { form == "full" && "workingType" in data &&
-                <div className='text-gray-500 text-sm italic'>
+                <div className='text-zinc-500 text-sm italic'>
                   { typeof data.workingType == 'string' ?
                       data.workingType :
                       data.workingType.join(' | ')
@@ -84,7 +84,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
           </div>
 
           { form == "full" && "dates" in data &&
-            <div className='flex flex-row gap-x-3 md:flex-col text-xs text-gray-400 self-start text-right'>
+            <div className='flex flex-row gap-x-3 md:flex-col text-xs text-zinc-500 self-start text-right'>
               <span className='uppercase'>
                 { displayDate(data.dates[0]) }
                 ~
@@ -101,7 +101,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
           <div className='w-full flex flex-row mt-3 flex-wrap gap-2'>
             {
               data.techs.map(tech => 
-              <div className='opacity-40' key={tech}>
+              <div className='opacity-40 invert' key={tech}>
                 <TechIcon icon={tech} size={30} />
               </div>
               )
@@ -109,10 +109,10 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
           </div>
         }
 
-        <div className='text-gray-700 text-lg'>
+        <div className='text-zinc-100 text-lg'>
           { data.challenges.map(challenge => 
             <p key={challenge} className='mt-2'>
-              <b className='text-blue-600'>+</b> { challenge }
+              <b className='text-green-600'>+</b> { challenge }
             </p>
            ) }
         </div>

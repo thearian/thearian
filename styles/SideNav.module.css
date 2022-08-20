@@ -1,5 +1,5 @@
 .container {
-  @apply flex flex-col gap-y-7 p-5 w-full text-gray-800 md:w-1/4 md:ml-2 lg:w-1/6 lg:ml-5;
+  @apply flex flex-col gap-y-7 p-5 w-full text-zinc-800 md:w-1/4 md:ml-2 lg:w-1/6 lg:ml-5;
 }
 
 .skills {
@@ -11,5 +11,5 @@
 }
 
 .badge>span {
-  @apply inline text-xs uppercase py-0.5 px-3 font-bold text-sky-600;
+  @apply inline text-xs uppercase py-0.5 px-3 font-bold text-green-500;
 }

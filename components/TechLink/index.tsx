@@ -5,12 +5,13 @@ interface Props {
   tech: string
   id: string
   size?: number
+  className?: string
 }
 
-const TechLink: NextPage<Props> = ({ tech, id, size }) => {
+const TechLink: NextPage<Props> = ({ tech, id, size, className }) => {
   return (
       <a href={`https://${tech}.com/${id}`}>
-        <TechIcon icon={tech} size={size} />
+        <TechIcon icon={tech} size={size} className={className} />
       </a>
   )
 }

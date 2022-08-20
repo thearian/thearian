@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   const [focus, setFocus] = useState<IExperience | null>(null)
 
   return (
-    <div>
+    <div className='bg-black'>
       <Head>
         <title>Arian Mirahmadi Portfolio</title>
         <meta name="description" content="" />
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 
         <div className='h-fit md:w-3/4 lg:w-5/6 flex flex-col md:flex-row md:flex-wrap'>
           { experiences.map((job, i) =>
-            <Experience delay={i * 100} key={job.company} data={job} onFocus={setFocus} />
+            <Experience delay={i * 100} key={job.company || job.projectName} data={job} onFocus={setFocus} />
           ) }
         </div>
       </main>

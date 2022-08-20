@@ -5,15 +5,15 @@ const Header: NextPage = () => {
   return (
       <header className='flex flex-col md:flex-row justify-start p-7 gap-y-10 md:gap-x-10'>
         <div className='w-full text-center md:w-1/4 lg:w-1/6'>
-          <Image className='rounded-full' alt="" width={200} height={200} src="/../public/profile.png" />
+          <Image className='rounded-full' alt="" width={200} height={200} src="/../public/profile.jpg" />
         </div>
 
         <div className='flex flex-col justify-center gap-y-10 md:gap-y-3'>
-          <h1 className='text-5xl text-sky-600 md:text-3xl font-[Montserrat] text-center md:text-start font-bold'>
+          <h1 className='text-5xl text-green-500 md:text-3xl font-[Montserrat] text-center md:text-start font-bold'>
             Arian Mirahmadi
           </h1>
 
-          <p className='text-gray-500'>
+          <p className='text-zinc-500'>
             Web Developer, Engineer and  Manager <br/>
             Fluent in English <br/>
             With <b>+3 years</b> of modern web-dev experience

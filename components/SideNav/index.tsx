@@ -61,7 +61,7 @@ const SideNav: NextPage<Props> = ({ focus }) => {
               key={tech}
             >
               <TechIcon icon={tech} className={
-                  `${matchAny(tech, focus?.techs) ? "filter-bg-blue-500" : 'opacity-70'} transition transition-color `
+                  `${matchAny(tech, focus?.techs) ? "filter-bg-green-500" : 'opacity-50 invert'} transition transition-color `
               } size={18} />
               <span className='ml-2'>
                 { tech.replaceAll("dot", " ") }

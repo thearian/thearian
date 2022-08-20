@@ -1,5 +1,5 @@
 .container {
-  @apply transition p-2;
+  @apply transition p-3;
   animation: FloatIn ease-in-out 1s;
 }
 
@@ -10,19 +10,19 @@
 .container_full {
   @apply fixed top-0 left-0 w-screen h-screen;
   @apply flex flex-col justify-center items-center;
-  @apply backdrop-blur-lg z-40;
+  @apply backdrop-blur-xl z-40;
 }
 
 .card {
-  @apply rounded-2xl;
+  @apply rounded-2xl bg-zinc-900;
 }
 
 .container_fit .card {
-  @apply bg-gray-100 transition hover:bg-gray-50 h-full p-3;
+  @apply transition hover:bg-zinc-1000 h-full p-3;
 }
 
 .container_full .card {
-  @apply p-7 bg-white border shadow shadow-2xl m-3 md:w-2/3 lg:w-1/2
+  @apply p-7 border border-black shadow shadow-black shadow-2xl m-3 md:w-2/3 lg:w-1/2
 }
 
 .button {
@@ -34,11 +34,11 @@
 }
 
 .primary_button {
- @apply button bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold px-3;
+ @apply button bg-gradient-to-r from-green-600 to-green-800 text-white font-semibold px-3;
 }
 
 .secondary_button_hidden {
-  @apply button bg-gray-100 text-gray-400 px-3;
+  @apply button bg-zinc-800 text-zinc-500 px-3;
 }
 
 .secondary_button_active {
