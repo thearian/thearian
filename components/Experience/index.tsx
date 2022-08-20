@@ -52,7 +52,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
                   height={switchForm({fit: 40, full: 75})}
                 /> : <TechIcon
                   icon={data.techs[0]}
-                  className="opacity-70"
+                  className="opacity-60 invert"
                   size={switchForm({fit: 40, full: 75}) as number}
                 />
               }
