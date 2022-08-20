@@ -10,8 +10,8 @@ const TopBar: NextPage = () => {
 
       <div className='flex flex-row gap-x-3 opacity-90'>
         <TechLink className='invert' tech='github' id='thearian' />
-        <TechLink className='invert' tech='linkedin' id='thearian' />
-        <TechLink className='invert' tech='twitter' id='thearian' />
+        <TechLink className='invert' tech='linkedin' id='in/arian-mirahmadi-596487208' />
+        <TechLink className='invert' tech='twitter' id='arianmirahmadi' />
       </div>
     </div>
   )

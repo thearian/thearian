@@ -19,6 +19,7 @@ export const experiences: IExperience[] = [
       'Teached junior developers and hired them'
     ],
     url: "https://armi-co.com",
+    source: "https://github.com/armi-co",
     tags: [
       "Teaching",
       "Branding",
@@ -128,6 +129,7 @@ export const experiences: IExperience[] = [
       'Grew community using in-app weekly challenges'
     ],
     url: "https://weeshme.netlify.app",
+    source: "https://github.com/mahdineer/weesh-skin",
     tags: [
       "Product Manager"
     ]

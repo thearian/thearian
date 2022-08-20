@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Header: NextPage = () => {
   return (
       <header className='flex flex-col md:flex-row justify-start p-7 gap-y-10 md:gap-x-10'>
-        <div className='w-full text-center md:w-1/4 lg:w-1/6'>
-          <Image className='rounded-full' alt="" width={200} height={200} src="/../public/profile.jpg" />
+        <div className='w-full text-center md:w-1/4 lg:w-1/6 px-7 md:px-0'>
+          <Image className='rounded-full w-full' alt="" width={2200} height={2200} src="/../public/profile.jpg" />
         </div>
 
         <div className='flex flex-col justify-center gap-y-10 md:gap-y-3'>

@@ -1,4 +1,3 @@
-import {HeartIcon} from '@heroicons/react/solid'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import {useState} from 'react'
@@ -7,7 +6,6 @@ import Experience from '../components/Experience'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SideNav from '../components/SideNav'
-import TechLink from '../components/TechLink'
 import TopBar from '../components/TopBar'
 import {experiences} from '../constants/resume'
 
