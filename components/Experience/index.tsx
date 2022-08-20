@@ -128,7 +128,7 @@ const Experience: NextPage<Props> = ({ data, onFocus, delay }) => {
               href={data.source}
             >
               { data.source ?
-                <TechIcon icon='github' size={25} className='opacity-90 invert' /> :
+                <TechIcon icon='github' size={25} className='opacity-90' /> :
                 <EyeOffIcon className='w-7 h-7 md:w-5 md:h-5' />
               }
               <span className='ml-2'>

@@ -10,7 +10,7 @@ interface Props {
 
 const TechLink: NextPage<Props> = ({ tech, id, size, className }) => {
   return (
-      <a href={`https://${tech}.com/${id}`}>
+      <a href={`https://${tech}.com/${id}`} className='flex justify-center'>
         <TechIcon icon={tech} size={size} className={className} />
       </a>
   )
