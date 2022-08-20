@@ -15,8 +15,13 @@ const Home: NextPage = () => {
   return (
     <div className='bg-black'>
       <Head>
-        <title>Arian Mirahmadi Portfolio</title>
-        <meta name="description" content="" />
+        <title>Arian Mirahmadi</title>
+        <meta name="description" content="
+            Web Developer, Engineer and  Manager
+            Fluent in English
+            With +3 years of modern web-dev experience
+            and +7 years of web-dev ativity and study
+          " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
