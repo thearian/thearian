@@ -4,11 +4,9 @@
 
 # Arian Mirahmadi
 
-Hi :wave: I'm a **Backend/FullStack** web developer with experiences in `Product Management`,
-`Rust` language and `Open source`
+Hi :wave: I'm a **FullStack** web developer (Javascript/Typescript) with experiences in `Product Management`,
+`Rust language` and `Open source maintainance`
 
-:handshake: willing to contribute to open source projects of yours
+Checkout [arianm.ir](https://arianm.ir)
 
-[ArianM.ir portfolio](https://arianm.ir)
-
-[view documentation on my portfolio source](./docs/getting_started.md)
+[documentation on my portfolio source](./docs/getting_started.md)
